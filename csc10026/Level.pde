@@ -42,7 +42,6 @@ class LevelManager {
           player.y = player.startY = y * 64;
         } else if (currentChar == 'B') {
           Box box = new Box(x * 64, y * 64, boxImage, brokenBoxSprites);
-          box.index = index;
           levelObjects[index] = box;
           index++;
         } else if (currentChar == 'C') {
