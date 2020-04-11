@@ -48,7 +48,7 @@ class LevelManager {
           levelObjects[index] = new Collectable(x * 64 + 16, y * 64 + 16, 32, 32, acornSprites, 4, CollectableType.ACORN);
           index++;
         } else if (currentChar == 'E') {
-          levelObjects[index] = new Collectable(x * 64 + 16, y * 64 + 16, 32, 32, pageSprites, 8, CollectableType.PAGE);
+          levelObjects[index] = new Collectable(x * 64 + 20, y * 64 + 13, 25, 25, pageSprites, 8, CollectableType.PAGE);
           index++;
         } else if (x == lineLength - 1 && currentChar == 'W') {
           levelObjects[index] = new Platform(px * 64, y * 64, woodImage, x - px);

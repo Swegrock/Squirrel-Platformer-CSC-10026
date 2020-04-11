@@ -19,7 +19,7 @@ class HUD{
     fill(100);
     rect(0, 0, width, 80);
     
-    textSize(64);
+    textSize(32);
     textAlign(CENTER);
     
     // Draw out each of the HUD texts.
