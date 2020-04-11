@@ -63,8 +63,10 @@ void GameScene() {
   for (int j = 0; j < level.length; j++) {
     player.collisionSide = CheckCollisions(player, level.levelObjects[j]);
     
-    // NOTE: Add if check here to see if collision side is 0, additional if check may help speed.
-    player.checkColliders();
+    //If no collision has been made then the player does not need to change state.
+    if (player.collisionSide == 0){
+      player.checkColliders();
+    }
   }
   
   // Move the camera according to the players new position.
