@@ -1,4 +1,4 @@
-int CheckCollisions(Player p1, ImageObject p2) {
+int CheckCollisions(Player p1, Object p2) {
   // If the platform isn't enabled the player can pass through.
   if (!p2.enabled) { return 0; }
   
@@ -85,5 +85,5 @@ void CollectCollectable(Collectable collectable) {
     }
   }
   collectable.enabled = false;
-  collectable.show = false;
+  collectable.visible = false;
 }

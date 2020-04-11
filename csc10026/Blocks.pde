@@ -32,7 +32,7 @@ class Box extends MultiImageObject {
       frame++;
     } else if (!enabled) {
       breakBox();
-      show = false;
+      visible = false;
     }
   }
 

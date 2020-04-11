@@ -11,7 +11,8 @@ class Collectable extends MultiImageObject {
   @Override
   void drawObject(){
     float sway = sin(frame) * swayFactor;
-    image(images[round(frame) % 5], x  - camera.x, y  - camera.y + sway, w, h);
+    objectImage = images[round(frame) % 5];
+    image(objectImage, x  - camera.x, y  - camera.y + sway, w, h);
     frame += 0.1;
   }
 }
