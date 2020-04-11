@@ -54,6 +54,8 @@ void IntroScene() {
   }
 }
 
+// Game scene
+
 void GameScene() {
   // Update the players velocity, position and check boundaries.
   player.update();
