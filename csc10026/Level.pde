@@ -1,15 +1,26 @@
+// This is the level index used to determine which level will be loaded.
 int levelIndex = 0;
 
 class LevelManager {
 
+  // This contains every object on the level, the maximum objects a level can have is 150.
   ImageObject[] levelObjects = new ImageObject[150];
+  
+  // The length will always be either equal or less than the size of levelObjects, it stops null objects from being drawn and crashing the program.
   int length;
 
+  // The load level method will load the level from its String array and draw it out in the world.
   void loadLevel(String[] levelString) {
+    // The index of an empty position in levelObjects.
     int index = 0;
 
     for (int y = 0; y < levelString.length; y++) {
 
+      // Each of the characters will be translated into their repsective object and instantiated in the world.
+      // The only thing worthy of noting here is how platforms objects are created using length instead of creating a new platform for each character,
+      // this means that the platforms will be far less processor intensive and allows for more platforms to exist within the world.
+      // In theory this ccould be achieved for platforms blocks above and below each other however that would be far more difficult to achieve.
+      
       String line = levelString[y];
       int lineLength = line.length();
 
@@ -52,6 +63,15 @@ class LevelManager {
     length = index;
   }
 }
+
+// Levels are defined using a 2D array containing Strings of 132 characters (the width of the world divided by the width of a block).
+// Each array is 35 Strings in length (the height of the world divided by the height of a block).
+// The characters translate as follows:
+// W = Wooden platform block
+// C = Acorn collectable
+// B = Breakable box platform block
+// P = Player starting position
+// E = Page position, end of level marker
 
 String[][] levels = new String[][]
   {{"____________________________________________________________________________________________________________________________________",
