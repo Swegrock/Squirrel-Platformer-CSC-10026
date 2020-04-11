@@ -77,7 +77,7 @@ void CollectCollectable(Collectable collectable) {
     levelIndex++;
     if (levelIndex >= levels.length){
       won = true;
-      winCount = 0;
+      winCount = 200;
       levelIndex = 0;
       level.loadLevel(levels[levelIndex]);
       levelCompleteAudio.rewind();

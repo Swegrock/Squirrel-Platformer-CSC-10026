@@ -64,11 +64,7 @@ void GameScene() {
   // Not an efficient way of checking due to looping though every object, however the CheckCollisions function will determine if it is worth actually checking intersections, positions etc.
   for (int j = 0; j < level.length; j++) {
     player.collisionSide = CheckCollisions(player, level.levelObjects[j]);
-    
-    //If no collision has been made then the player does not need to change state.
-    if (player.collisionSide == 0){
-      player.checkColliders();
-    }
+    player.checkColliders();
   }
   
   // Move the camera according to the players new position.

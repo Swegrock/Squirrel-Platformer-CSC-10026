@@ -42,6 +42,7 @@ void keyPressed() {
 // Pressing enter will cause the Win credits to be displayed.
 void EnterPressed(){
   if (won == false){
+    winCount = 200;
     won = true; 
   }
 }
