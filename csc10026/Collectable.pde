@@ -1,3 +1,4 @@
+// The collectable object extends the MultiImageObject class and adds a sway factor and collectable type of.
 class Collectable extends MultiImageObject {
   int swayFactor;
   CollectableType typeOf;
@@ -10,6 +11,7 @@ class Collectable extends MultiImageObject {
   
   @Override
   void drawObject(){
+    // Draw the collectable and sway it according to a sin value of the current frame.
     float sway = sin(frame) * swayFactor;
     objectImage = images[round(frame) % 5];
     image(objectImage, x  - camera.x, y  - camera.y + sway, w, h);
@@ -17,8 +19,8 @@ class Collectable extends MultiImageObject {
   }
 }
 
+// Using enums to determine which type of collectable has been collected.
 enum CollectableType {
   PAGE,
-  ACORN,
-  HEART
+  ACORN
 }
