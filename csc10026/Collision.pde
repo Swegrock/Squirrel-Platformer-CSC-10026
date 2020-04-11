@@ -19,6 +19,7 @@ int CheckCollisions(Player p1, Object p2) {
       float overlapX = bothHalfWidths - abs(distanceX);
       float overlapY = bothHalfHeights - abs(distanceY);
       
+      // Perform checks to determine where collision occured.
       if (overlapX >= overlapY) {
         if (distanceY > 0) {
           if (p2 instanceof Collectable){
@@ -63,11 +64,14 @@ int CheckCollisions(Player p1, Object p2) {
 }
 
 void CollectCollectable(Collectable collectable) {
+  // If collectable is acorn, add 100 to score, add 1 to acorn count and play collectable sound.
   if (collectable.typeOf == CollectableType.ACORN){
     hud.acorns++;
     hud.addScore(collectable.x, collectable.y, 100);
     collectAudio.rewind();
     collectAudio.play();
+  // If collectable is page, add 200 to score, move to the next level and play level complete sound.
+  // If all levels have been complete then reset level count and play win scene.
   } else if (collectable.typeOf == CollectableType.PAGE){
     hud.addScore(collectable.x, collectable.y, 200);
     levelIndex++;
@@ -84,6 +88,7 @@ void CollectCollectable(Collectable collectable) {
       levelCompleteAudio.play();
     }
   }
+  // Disable collectable.
   collectable.enabled = false;
   collectable.visible = false;
 }
