@@ -1,3 +1,4 @@
+// The player class is the most involved.
 class Player extends ImageObject {
   //Local player variables.
   float startX, startY, // This is the players start x and y used for when they die.

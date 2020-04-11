@@ -1,3 +1,4 @@
+// Minim requires a Minim object to be created to load files.
 Minim minim;
 AudioPlayer musicAudio, jumpAudio, breakAudio, collectAudio, damageAudio, levelCompleteAudio;
 
