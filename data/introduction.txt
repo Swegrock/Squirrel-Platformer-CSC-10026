@@ -1,0 +1,23 @@
+AT ANY POINT DURING THE GAME PRESS 'ENTER'
+TO SKIP STRAIGHT TO THE CREDITS!
+
+Every year the Human Computer Interaction Conference is held.
+A conference which shows the latest studies made into
+Human Computer Interaction,
+a blend of psychology and computer science.
+
+Scruffy the Keele Squirrel,
+was getting ready to submit his paper when
+a gust of wind blew it out his hands,
+across all of the campus.
+Help Scruffy collect his pages so that he can submit his paper!
+
+Move Scruffy with the LEFT and RIGHT arrow keys!
+Scruffy will jump with the UP arrow key!
+Collect Acorns to gain more points!
+Collect Pages to progress to the next level!
+Jumping on crates will cause them to break,
+revealing more acorns for Scruffy to collect.
+You only have 3 lives!
+If Scruffy runs out of lives, he'll have to start again!
+Try to get the maximum points!

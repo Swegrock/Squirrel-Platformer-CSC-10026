@@ -1,0 +1,84 @@
+Well done!
+You've found all 3 pages of Scruffy's paper.
+Now Scruffy will be able to submit his paper.
+Feel free to play again, you'll keep your score and acorns!
+-------------------------------
+CREDITS
+--------------------------------
+Coursework: Keele 'HCI' Themed Sketch
+Name: Sebastian Heron
+Student ID: 1901408601
+Student Login: x1f52
+-------------------------------
+DOCUMENTATION
+--------------------------------
+1. Interaction
+--------------------------------
+User can control the player using the
+LEFT, RIGHT and UP arrow keys.
+An implementation was added to skip
+straight to the credits using the ENTER key.
+-------------------------------
+2. Player and Physics
+-------------------------------
+The player's x and y positions are changed
+according to each of their velocities.
+The y velocity is set to a negative value when jumping,
+however a gravity value is consistently added
+to make the player move down the screen.
+The x acceleration is added to the x velocity on each
+frame, the acceleration is set to either +1 or -1 according
+to the direction of movement.
+Friction is also applied to the x velocity to stop it from
+sliding about and apply more realism.
+The x and y velocity are capped at a maximum value
+to prevent the player moving too quickly.
+The player uses collision detection to tell
+whether they are on the ground or not.
+Visually the player is a set of sprites which the displayed
+sprite is calculated based on the variables of the player.
+(e.g. is the player in the air > show jumping sprites).
+-------------------------------
+3. Collision detection
+-------------------------------
+For each platform on the screen the player is checked
+to see if it is intersecting with the platform and
+move the player accordingly.
+If the platform is below the player, the player is onGround.
+Collectables are also checked, if the collectable intersects
+with the player then it is disabled.
+-------------------------------
+4. Camera and Viewport
+-------------------------------
+The entire map size is defined as a world object, which
+contains the size and position of the world.
+The camera determines where the viewport is relative
+to the world. In this case the camera is tied to position
+of the player and the world will move around the player.
+The different z positions of the background will mean
+it moves slower or faster according to the scale
+of its z position.
+-------------------------------
+5. Media
+-------------------------------
+Sprites were designed in photoshop and saved as PNG
+files with transparent backgrounds.
+They're loaded in seperately, in the case of animations
+they're loaded into an array.
+Sounds were designed and created in bfxr.
+Music loop was created in Cubasis using a pixel filter.
+The pixel font was supplied by an opensource font
+creator ('fontsquirrel.com').
+Minim was used to play the sound effects as the version
+of Processing I was using, the Sound library did not work.
+-------------------------------
+6. Game Design
+-------------------------------
+The game was designed as 2D sidescrolling platformer.
+Using the classic platformer "Super Mario" as a basis
+for describing the mechanics: the player has 3 lives,
+collects acorns as 'coins' and pages act as the 'flag' to
+transition to the next level. The player can also break
+boxes to collect more acorns, furthering their overall
+score. Collecting 3 pages will complete the game
+revealing the credits, the acorns are optional.
