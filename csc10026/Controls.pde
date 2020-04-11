@@ -1,5 +1,6 @@
 boolean left, right, up, down;
 
+// If key is released set the particular key released to false.
 void keyReleased() {
   if (key == CODED && !loading) {
     if (keyCode == LEFT) {
@@ -17,6 +18,7 @@ void keyReleased() {
   }
 }
 
+// If key is pressed set the particular key pressed to true.
 void keyPressed() {
   if (key == CODED && !loading) {
     if (keyCode == LEFT) {
@@ -36,6 +38,8 @@ void keyPressed() {
   }
 }
 
+// This is in for the purpose of testing, and also for marking. Considering how difficult the game can be.
+// Pressing enter will cause the Win credits to be displayed.
 void EnterPressed(){
   if (won == false){
     won = true; 
