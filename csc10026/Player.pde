@@ -111,6 +111,7 @@ class Player extends ImageObject {
       damageAudio.rewind();
       damageAudio.play();
       hud.removeLife();
+      velocityX = 0;
     }
   }
 
