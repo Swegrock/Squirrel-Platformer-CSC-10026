@@ -13,6 +13,11 @@ PImage[] walkingSprites, jumpingSprites, pageSprites, acornSprites, brokenBoxSpr
 
 PFont pixelFont;
 
+// Load all of the content from the files.
+// Use loadStrings to load credit files.
+// Use minim for mp3 files.
+// Use loadImage for loading image files.
+// Use createFont for loading ttf font files.
 void LoadContent(){
   introductions = loadStrings("introduction.txt");
   credits = loadStrings("credits.txt");
@@ -32,6 +37,8 @@ void LoadContent(){
   levelCompleteAudio = minim.loadFile("levelComplete.mp3");
   levelCompleteAudio.setGain(-10);
   
+  // Begin looping the music here.
+  // NOTE: When music is finished, add information about how avg. game time takes 10 minutes, song loops 100 times for 15 seconds (per se) so song loops for 25 minutes.
   musicAudio.loop(100);
   
   infoImage = loadImage("InfoWindow.png");
@@ -62,5 +69,6 @@ void LoadContent(){
   }
   
   pixelFont = createFont("pixelfont.ttf", 32);
+  //Set the font here for the entire application, as it uses 1 font.
   textFont(pixelFont);
 }

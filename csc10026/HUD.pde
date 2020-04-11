@@ -18,7 +18,6 @@ class HUD{
     rect(0, 0, width, 80);
     
     textSize(64);
-    textFont(pixelFont);
     textAlign(CENTER);
     textOutlined("ACORNS", width/12, 35, 255, 0);
     textOutlined(String.valueOf(acorns), width/11, 70, color(0, 0, 255), 0);

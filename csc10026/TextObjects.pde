@@ -28,7 +28,6 @@ class ScoreText extends Object {
   void display() {
     // If the score has drifted more than 20 places above its original position then it will not be drawn.
     if (yDrift < 20) {
-      textFont(pixelFont);
       textSize(20);
       textAlign(CENTER);
       textOutlined(String.valueOf(score), x - camera.x, y - camera.y - yDrift, 255, 0);
